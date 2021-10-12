@@ -4,6 +4,7 @@ import { Button } from 'antd';
 import 'antd/dist/antd.css';
 import { dataSource } from './Datasource';
 import { useHistory } from "react-router-dom";
+import '../css/table.css'
 
 function Employee() {
   const history = useHistory();
@@ -16,19 +17,21 @@ function Employee() {
   }
   const columns = [
     {
-      title: 'EmployeeID',
+      title: <b>EmployeeID</b>,
       dataIndex: 'employeeid',
       key: 'employeeid',
     },
     {
-      title: 'FirstName',
+      title: <b>FirstName</b>,
       dataIndex: 'firstname',
       key: 'firstname',
     },
     {
-      title: 'View',
+      title: <b>View</b>,
       key: 'operation',
       render: (data) => <Button type="primary"
+      className="button1"
+      style={{borderRadius:"10px"}}
         onClick={() => handleData(data)}>VIEW</Button>
     },
 
