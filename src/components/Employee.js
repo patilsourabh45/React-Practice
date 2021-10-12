@@ -6,15 +6,12 @@ import { dataSource } from './Datasource';
 import { useHistory } from "react-router-dom";
 
 function Employee() {
-
   const history = useHistory();
-
   const handleData = (data) => {
 
     history.push({
-      pathname: '/employee/:employeeid',
-      state: { detail: data }
-
+      pathname: '/employee/' + data.employeeid,
+      state: { detail: data } 
     })
   }
   const columns = [

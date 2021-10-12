@@ -1,11 +1,13 @@
 import { useLocation, Link} from "react-router-dom";
 import '../css/table.css'
+import {dataSource} from './Datasource'
 
 
 const EmployeeData = (props) => {
     const location = useLocation();
     console.log(location);
     const { employeeid, firstname, lastname } = location.state.detail;
+
 
     return (
         <div className="center">
