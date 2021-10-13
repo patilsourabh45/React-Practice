@@ -12,7 +12,7 @@ function Employee() {
 
     history.push({
       pathname: '/employee/' + data.employeeid,
-      state: { detail: data } 
+      state: { detail: data }
     })
   }
   const columns = [
@@ -30,8 +30,8 @@ function Employee() {
       title: <b>View</b>,
       key: 'operation',
       render: (data) => <Button type="primary"
-      className="button1"
-      style={{borderRadius:"10px"}}
+        className="button1"
+        style={{ borderRadius: "10px" }}
         onClick={() => handleData(data)}>VIEW</Button>
     },
 

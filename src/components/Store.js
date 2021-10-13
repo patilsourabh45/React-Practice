@@ -1,6 +1,6 @@
 import create from 'zustand'
-import { devtools} from 'zustand/middleware'
-import {dataSource} from './Datasource'
+import { devtools } from 'zustand/middleware'
+import { dataSource } from './Datasource'
 
 let peopleStore = (set) => ({
   people: (dataSource)
@@ -8,4 +8,6 @@ let peopleStore = (set) => ({
 
 peopleStore = devtools(peopleStore)
 
-export const usePeopleStore = create(peopleStore)
+const usePeopleStore = create(peopleStore)
+
+export default usePeopleStore;

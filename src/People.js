@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { usePeopleStore } from './components/Store'
 
 export default function People() {
